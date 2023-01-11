@@ -1,4 +1,4 @@
-setwd("/home/clairea/wa26/sos/Heart_rate_analysis/Step4_Run_PhysIO_Toolbox_Per_Slice/")
+setwd("S:/MNHS-Psych/ANDL-Lab-TAG-Study/SOS Study/physio/")
 
 library(readxl)
 library(tidyverse)
