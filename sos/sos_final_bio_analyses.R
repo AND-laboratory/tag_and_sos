@@ -71,7 +71,7 @@ HR_conditions$Task_condition <- as.factor(HR_conditions$Task_condition)
 
 HR_conditions$ID <- as.factor(HR_conditions$ID)
 
-HR_conditions_avg <- HR_conditions %>% group_by(ID, Task_condition) %>% summarize(mean_HR = mean(HR))
+HR_conditions_avg <- HR_conditions %>% group_by(ID, Task_condition) %>% summarise(mean_HR = mean(HR))
 
 HR_conditions_clean <- HR_conditions_avg %>% filter(Task_condition!="NA")
 HR_conditions_clean$Task_condition <- factor(HR_conditions_clean$Task_condition)
@@ -851,4 +851,8 @@ difference_rcorrs$P
 
 corrplot(difference_corrs, method = "number", tl.col="black", col=colorRampPalette(c("#FDE725FF","#29AF7FFF","#440154FF"))(100))
 
+
+# SAVE WORKSPACE #
+
+save.image('S:/MNHS-Psych/ANDL-Lab-TAG-Study/SOS Study/biopaper_analyses.RData')
          
